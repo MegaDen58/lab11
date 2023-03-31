@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Reflection;
 
 public class Program
@@ -10,7 +10,7 @@ public class Program
 
         Message message = (string[] array, ref int index) =>
         {
-            if(index == 6)
+            if (index >= 6)
             {
                 Console.WriteLine(array[index]);
                 index = 0;
@@ -22,7 +22,7 @@ public class Program
             }
         };
 
-        for(int i = 0; i < 16; i++)
+        for (int i = 0; i < 16; i++)
         {
             message(day, ref x);
         }
